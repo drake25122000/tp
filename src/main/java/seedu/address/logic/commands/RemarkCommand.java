@@ -5,14 +5,12 @@ import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.Remark;
 
+import java.util.List;
+
 import seedu.address.commons.core.index.Index;
 import seedu.address.commons.core.Messages;
-
 import seedu.address.logic.commands.exceptions.CommandException;
-
 import seedu.address.model.Model;
-
-import java.util.List;
 
 /**
  * Changes the remark of an existing person in the address book.
