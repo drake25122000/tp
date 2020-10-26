@@ -193,7 +193,7 @@ public class ModelManager implements Model {
 
     @Override
     public void unassignInstructorFromAll(Person instructor) throws CommandException {
-        addressBook.unassignInstructorFromAll(instructor);
+        addressBook.unassignInstructorFromAll(instructor, semester);
         updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);
     }
 

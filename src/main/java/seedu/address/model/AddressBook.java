@@ -220,10 +220,11 @@ public class AddressBook implements ReadOnlyAddressBook {
      * The instructor must exist in at least one module.
      * @throws CommandException if {@code instructor} does not exist in any of the modules.
      */
-    public void unassignInstructorFromAll(Person instructor) throws CommandException {
+    public void unassignInstructorFromAll(Person instructor, int semester) throws CommandException {
         requireAllNonNull(instructor);
 
-        modules.unassignInstructorFromAll(instructor);
+        modules[semester].unassignInstructorFromAll(instructor);
+        displayModules.unassignInstructorFromAll(instructor);
     }
 
     /**
