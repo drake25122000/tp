@@ -57,6 +57,9 @@ public class ModelManager implements Model {
         this.userPrefs.resetData(userPrefs);
     }
 
+    /**
+     * Switch the working module list to point to the other semester's module list.
+     */
     public void switchSemester() {
         semester = semester == 0 ? 1 : 0;
         this.addressBook.getDisplayModuleList().setModules(this.addressBook.getModuleList(semester));

@@ -145,7 +145,7 @@ public class AddressBook implements ReadOnlyAddressBook {
     /**
      * Removes all the modules from the list.
      */
-    public void clearMod( int semester ) {
+    public void clearMod(int semester) {
         modules[semester].clearAll();
         displayModules.clearAll();
     }
@@ -185,7 +185,7 @@ public class AddressBook implements ReadOnlyAddressBook {
         requireAllNonNull(target, editedModule);
 
         modules[semester].setModule(target, editedModule);
-        displayModules.setModule(target,editedModule);
+        displayModules.setModule(target, editedModule);
     }
 
     /**
@@ -199,6 +199,9 @@ public class AddressBook implements ReadOnlyAddressBook {
         displayModules.assignInstructor(instructor, moduleCode);
     }
 
+    /**
+     * Unassigns all instructors from all modules from the given {@code semester}.
+     */
     public void unassignAllInstructors(int semester) {
         modules[semester].unassignAllInstructors();
         displayModules.unassignAllInstructors();
